@@ -1,13 +1,14 @@
-# Ali's ReadMe
-    ##### /Users/ali/bootcamp/homework/Challenge-9/Professional-README-Generator_Rudnick/assets/YS Logo.png/n [alirudnick]/n(https://github.com/alirudnick) [Email Me](ali.rudnick@yahoo.com)
-    #### ReadMeGenerator© 2020 All Rights Reserved.  true All material must be cited or credited, when using material (free to use).
+function fileGenerator(response) {
+    var content = `# ${response.title}
+    ##### ${response.logo}/n [${response.userName}]/n(${response.GitHub}) [Email Me](${response.email})
+    #### ReadMeGenerator© 2020 All Rights Reserved.  ${response.license} All material must be cited or credited, when using material (free to use).
     
     ## Table of Contents
 
     
     # Repository Description
     ###### [Back to Table of Contents](#Table-of-Contents)
-    This is a strictly command-line node.js application for quickly generating README files.
+    ${response.description}
         
     ## User Story
     ### As the Quiz Administrator
@@ -23,10 +24,14 @@
     9.   I want to click on the links in the Table of Contents; and then, I am taken to the corresponding section of the README.
 
     ## License
-    true
+    ${response.license}
     
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
     The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
+    return content;
+};
+
+module.exports = fileGenerator;
